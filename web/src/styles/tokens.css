@@ -1,0 +1,63 @@
+/* Rollycall design tokens — "Roll-call sensor console". Dark is the default (user override of BRIEF §8, 04-11-2026).
+   Token NAMES are kept from v1 so every SSR page restyles without code changes:
+   --paper = page background, --panel = card surface, --ink = primary text. */
+
+:root {
+  color-scheme: dark;
+  /* surfaces */
+  --paper: #06090A;                       /* page */
+  --paper-2: #0A0F10;                     /* raised band */
+  --panel: rgba(14, 22, 21, 0.62);        /* glass card */
+  --panel-solid: #0E1615;
+  --panel-hi: rgba(22, 34, 32, 0.78);     /* hover / header */
+  /* text (contrast measured on --paper) */
+  --ink: #E6F2EC;      /* 16.9:1 */
+  --ink-2: #A7B6AF;    /* 9.2:1 */
+  --ink-3: #82918B;    /* 5.9:1 */
+  --ink-inv: #06090A;  /* text on neon */
+  /* lines + glow */
+  --line: rgba(130, 255, 196, 0.13);
+  --line-2: rgba(130, 255, 196, 0.26);
+  --grid: rgba(130, 255, 196, 0.045);
+  --glow: 0 0 0 1px rgba(80, 255, 170, 0.10), 0 0 24px -6px rgba(57, 229, 140, 0.35);
+  /* status (same names as v1) */
+  --live: #39E58C;     /* neon count-green, 11.6:1 */
+  --live-hi: #7DFFB9;
+  --dead: #FF6A55;     /* rust → signal red, 6.9:1 */
+  --slate: #93A1B0;    /* unreachable, 7.6:1 */
+  --opaque: #5F6A72;   /* dots/bars only, never text */
+  --live-bg: rgba(57, 229, 140, 0.12);
+  --dead-bg: rgba(255, 106, 85, 0.12);
+  --slate-bg: rgba(147, 161, 176, 0.12);
+  --focus: #7DFFB9;
+
+  /* type */
+  --f-display: 'Archivo Black', 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+  --f-body: 'Public Sans', -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --f-mono: 'Red Hat Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --t-xs: 0.75rem;
+  --t-sm: 0.875rem;
+  --t-md: 1rem;
+  --t-lg: 1.25rem;
+  --t-xl: 1.75rem;
+  --t-2xl: clamp(2.5rem, 1.3rem + 5vw, 5.25rem);
+  --lh-tight: 1.02;
+  --lh-body: 1.55;
+
+  /* space (4 px base) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px;
+
+  /* layout */
+  --wrap: 1200px;
+  --gutter: 16px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --rule: 1px solid var(--line);
+  --blur: blur(14px) saturate(140%);
+
+  /* motion */
+  --draw: 300ms;
+  --stagger: 20ms;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+@media (min-width: 768px) { :root { --gutter: 32px; } }

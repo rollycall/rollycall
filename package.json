@@ -1,0 +1,32 @@
+{
+  "name": "rollycall",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/src/index.mjs",
+    "test": "node --test \"server/test/*.test.mjs\" \"shared/test/*.test.mjs\"",
+    "build": "node scripts/build-web.mjs",
+    "index": "node scripts/index.mjs"
+  },
+  "dependencies": {
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/public-sans": "^5.3.0",
+    "@fontsource/red-hat-mono": "^5.3.0",
+    "@noble/hashes": "^2.4.0",
+    "better-sqlite3": "^13.0.3",
+    "esbuild": "^0.28.2",
+    "fastify": "^5.12.8",
+    "sharp": "^0.35.5",
+    "tldts": "^7.4.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollycall/rollycall.git"
+  },
+  "homepage": "https://rollycall.xyz"
+}

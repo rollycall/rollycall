@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rollycall components (fixture data)</title><meta name="robots" content="noindex">
+<link rel="icon" href="../../art/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="preview.css">
+<style>.cg > section{padding:var(--s6) 0;border-top:var(--rule)}.cg h2{font-size:var(--t-lg);margin-bottom:var(--s4)}.cg .row{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center}.cg .two{display:grid;gap:var(--s5)}@media(min-width:900px){.cg .two{grid-template-columns:1fr 1fr}}</style></head>
+<body class="rc"><div id="app"></div>
+<script type="module">
+import * as C from '../styles/components.mjs';
+const agents = await fetch('../../art/fixtures/agents.json').then((r) => r.json());
+const score = { v: '1', total: 71, parts: { card: 40, endpoint: 10, age: 0, owner: 6, independence: 10, pons: 5 },
+  inputs: { status: 'live', nameLen: 11, descLen: 88, imageOk: false, selfConsistent: true, endpointOk: true, endpointUrl: 'https://spin.trading/token/69', firstSeenLiveAt: '2026-11-04T07:40:00Z', owner: '0x2B5B000000000000000000000000000000009da3', ownerNonce: 24, platformHost: 'spin.trading', platformCount: 702, ownerAgentCount: 1, ca: '0x' + 'f1'.repeat(20) } };
+document.getElementById('app').outerHTML = `<div class="rc-fixture" role="note"><b>Fixture data</b> · component gallery for design review, not live data</div>
+${C.siteNav({ path: '/agents', xHandle: 'rollycallagent' })}
+<main class="rc-wrap cg">
+<section><h2>Status chips</h2><div class="row">${['live', 'unreachable', 'dead', 'opaque', 'host-down'].map((s) => `<span>${C.statusChip(s, { checkedAt: '2026-11-04T07:40:00Z', failCount: 2, since: '2026-11-01T00:00:00Z', scheme: 'priors:' })}</span>`).join('')}</div></section>
+<section><h2>Badges and score cell</h2><div class="row">${C.massBadge(10142)} ${C.ponsChip({ ca: '0x' + 'f1'.repeat(20), symbol: 'FIXT' })} <span class="rc-badge rc-badge--fixture">fixture</span> ${C.scoreCell(71)} ${C.scoreCell(12)}</div></section>
+<section><h2>Tally gate and split bar</h2><div class="row">${C.tallyGate(['live', 'live', 'unreach', 'dead', 'opaque'], { size: 40 })}</div><div style="max-width:420px;margin-top:12px">${C.splitBar({ live: 7804, unreachable: 10635, dead: 1381, opaque: 931 })}</div></section>
+<section class="two"><div><h2>Score breakdown panel</h2>${C.scorePanel(score)}</div>
+<div><h2>Copy boxes</h2>${C.copyBox('curl https://rollycall.xyz/api/agent/20700', { label: 'API' })}<div style="height:16px"></div>${C.copyBox('claude mcp add rollycall -- npx -y rollycall-mcp', { label: 'MCP install' })}
+<h2 style="margin-top:32px">Disclaimer</h2>${C.disclaimer()}</div></section>
+<section><h2>Dense table</h2>${C.agentsTable(agents.items, { caption: 'Fixture agents', showCaption: false })}</section>
+</main>${C.siteFooter({ xHandle: 'rollycallagent' })}`;
+const { initCopy } = await import('../styles/ui.js'); initCopy();
+</script></body></html>

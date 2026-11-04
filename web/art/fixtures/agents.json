@@ -1,0 +1,140 @@
+{
+  "_fixture": "FIXTURE — hand-written for the landing preview, not live data",
+  "items": [
+    {
+      "id": 20700,
+      "name": "Spinner #69",
+      "platform": "spin.trading",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 71
+      },
+      "owner": "0x0000000000000000000000000000000009c54564",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 20311,
+      "name": "Fixture Agent Kestrel",
+      "platform": "a-identity.xyz",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 68
+      },
+      "owner": "0x0000000000000000000000000000000009964439",
+      "ponsLink": {
+        "ca": "0xf1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1",
+        "symbol": "FIXT"
+      },
+      "massPlatform": false
+    },
+    {
+      "id": 19982,
+      "name": "Fixture Agent Ledgerline",
+      "platform": "meshgateway.co",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 66
+      },
+      "owner": "0x00000000000000000000000000000000096e8312",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 1204,
+      "name": "Fixture Agent bv7x-1204",
+      "platform": "bv7x.ai",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 58
+      },
+      "owner": "0x0000000000000000000000000000000000917c0c",
+      "ponsLink": null,
+      "massPlatform": true
+    },
+    {
+      "id": 20118,
+      "name": "Fixture Agent Tasker",
+      "platform": "tasklane.org",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 55
+      },
+      "owner": "0x00000000000000000000000000000000097ef20a",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 3381,
+      "name": "Fixture Agent bv7x-3381",
+      "platform": "bv7x.ai",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 54
+      },
+      "owner": "0x0000000000000000000000000000000001988a7b",
+      "ponsLink": null,
+      "massPlatform": true
+    },
+    {
+      "id": 19840,
+      "name": "Fixture Agent Loom",
+      "platform": "loomdesk.trade",
+      "status": "unreachable",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 12
+      },
+      "owner": "0x00000000000000000000000000000000095d5a80",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 20502,
+      "name": "Fixture Agent Prior",
+      "platform": "priors:",
+      "status": "opaque",
+      "checkedAt": null,
+      "score": {
+        "total": 4
+      },
+      "owner": "0x0000000000000000000000000000000009ad588a",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 15000,
+      "name": null,
+      "platform": "hoodai.fly.dev",
+      "status": "host-down",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 3
+      },
+      "owner": "0x00000000000000000000000000000000071483e8",
+      "ponsLink": null,
+      "massPlatform": true
+    },
+    {
+      "id": 20044,
+      "name": "Fixture Agent Synth",
+      "platform": "synths.lol",
+      "status": "dead",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 2
+      },
+      "owner": "0x00000000000000000000000000000000097600f4",
+      "ponsLink": null,
+      "massPlatform": false
+    }
+  ],
+  "cursor": "fixture",
+  "total": 20751
+}

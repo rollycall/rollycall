@@ -1,0 +1,34 @@
+[Unit]
+Description=Rollycall server (ERC-8004 agents on Robinhood Chain; read-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rollycall
+Group=rollycall
+WorkingDirectory=/opt/rollycall/repo
+Environment=NODE_ENV=production
+Environment=PORT=__PORT__
+Environment=HOST=127.0.0.1
+Environment=STATE_DIR=/opt/rollycall/state
+Environment=RPC_URL=https://robinhood-rpc.publicnode.com
+Environment=IPFS_GATEWAY=https://gateway.pinata.cloud/ipfs/
+Environment=TOKEN_JSON=/opt/rollycall/repo/web/token.json
+Environment=DOMAIN=__DOMAIN__
+Environment=SITE_URL=https://__DOMAIN__
+ExecStart=/usr/bin/node /opt/rollycall/repo/server/src/index.mjs
+Restart=always
+RestartSec=2
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/rollycall/state
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=700M
+
+[Install]
+WantedBy=multi-user.target

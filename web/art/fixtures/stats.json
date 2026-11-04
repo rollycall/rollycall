@@ -1,0 +1,13 @@
+{
+  "_fixture": "FIXTURE — hand-written for the landing preview, not live data",
+  "registered": 20751,
+  "live": 7804,
+  "unreachable": 10635,
+  "dead": 1381,
+  "opaque": 931,
+  "platforms": 38,
+  "massPlatforms": 2,
+  "topId": 20751,
+  "computedAt": "2026-11-04T07:40:00Z",
+  "rpcOk": true
+}

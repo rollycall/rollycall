@@ -1,0 +1,6 @@
+/* Self-hosted fonts (copied from @fontsource/* into /fonts/ by the build). Kept separate so the static preview loads without them. */
+@font-face { font-family: 'Archivo Black'; src: url('/fonts/archivo-black-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Public Sans'; src: url('/fonts/public-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Public Sans'; src: url('/fonts/public-sans-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Red Hat Mono'; src: url('/fonts/red-hat-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Red Hat Mono'; src: url('/fonts/red-hat-mono-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }

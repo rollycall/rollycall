@@ -1,0 +1,19 @@
+[Unit]
+Description=Rollycall daily cycle (rescan ids, host probes, cards, probes, scores, stats)
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=rollycall
+Group=rollycall
+WorkingDirectory=/opt/rollycall/repo
+Environment=STATE_DIR=/opt/rollycall/state
+Environment=RPC_URL=https://robinhood-rpc.publicnode.com
+Environment=DOMAIN=__DOMAIN__
+ExecStart=/usr/bin/node /opt/rollycall/repo/scripts/index.mjs
+TimeoutStartSec=6h
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/rollycall/state
+PrivateTmp=yes

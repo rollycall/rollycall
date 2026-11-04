@@ -1,0 +1,20 @@
+node_modules/
+state/
+*.db
+*.db-wal
+*.db-shm
+.env
+.DS_Store
+web/dist/
+node_modules/
+# internal notes, never public
+BRIEF.md
+RISET-DAN-ARSITEKTUR.md
+STATUS-*.md
+LANDING-NOTES.md
+INDEX-LOG.md
+marketing/
+launch-form.json
+.deploy-host
+web/art/shots/
+*.tgz

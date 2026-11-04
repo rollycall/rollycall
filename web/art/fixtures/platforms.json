@@ -1,0 +1,648 @@
+[
+  {
+    "host": "hoodai.fly.dev",
+    "display": "hoodai.fly.dev",
+    "count": 10142,
+    "live": 0,
+    "dead": 0,
+    "unreachable": 10142,
+    "opaque": 0,
+    "massPlatform": true,
+    "dnsOk": false,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "host": "bv7x.ai",
+    "display": "bv7x.ai",
+    "count": 5614,
+    "live": 5381,
+    "dead": 100,
+    "unreachable": 133,
+    "opaque": 0,
+    "massPlatform": true,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      10143,
+      10144,
+      10145
+    ]
+  },
+  {
+    "host": "priors:",
+    "display": "Custom scheme priors:",
+    "count": 931,
+    "live": 0,
+    "dead": 0,
+    "unreachable": 0,
+    "opaque": 931,
+    "massPlatform": false,
+    "dnsOk": null,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      16667,
+      16668,
+      16669
+    ]
+  },
+  {
+    "host": "synths.lol",
+    "display": "synths.lol",
+    "count": 910,
+    "live": 402,
+    "dead": 400,
+    "unreachable": 108,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      15757,
+      15758,
+      15759
+    ]
+  },
+  {
+    "host": "spin.trading",
+    "display": "spin.trading",
+    "count": 702,
+    "live": 651,
+    "dead": 30,
+    "unreachable": 21,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      17598,
+      17599,
+      17600
+    ]
+  },
+  {
+    "host": "loomdesk.trade",
+    "display": "loomdesk.trade",
+    "count": 412,
+    "live": 120,
+    "dead": 280,
+    "unreachable": 12,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      18300,
+      18301,
+      18302
+    ]
+  },
+  {
+    "host": "a-identity.xyz",
+    "display": "a-identity.xyz",
+    "count": 288,
+    "live": 260,
+    "dead": 20,
+    "unreachable": 8,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      18712,
+      18713,
+      18714
+    ]
+  },
+  {
+    "host": "tasklane.org",
+    "display": "tasklane.org",
+    "count": 197,
+    "live": 52,
+    "dead": 145,
+    "unreachable": 0,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19000,
+      19001,
+      19002
+    ]
+  },
+  {
+    "host": "meshgateway.co",
+    "display": "meshgateway.co",
+    "count": 96,
+    "live": 90,
+    "dead": 2,
+    "unreachable": 4,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19197,
+      19198,
+      19199
+    ]
+  },
+  {
+    "host": "fixture-host-24.example",
+    "display": "fixture-host-24.example",
+    "count": 84,
+    "live": 46,
+    "dead": 25,
+    "unreachable": 13,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20668,
+      20669,
+      20670
+    ]
+  },
+  {
+    "host": "fixture-host-01.example",
+    "display": "fixture-host-01.example",
+    "count": 83,
+    "live": 46,
+    "dead": 25,
+    "unreachable": 12,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19475,
+      19476,
+      19477
+    ]
+  },
+  {
+    "host": "fixture-host-02.example",
+    "display": "fixture-host-02.example",
+    "count": 79,
+    "live": 43,
+    "dead": 24,
+    "unreachable": 12,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19558,
+      19559,
+      19560
+    ]
+  },
+  {
+    "host": "fixture-host-03.example",
+    "display": "fixture-host-03.example",
+    "count": 75,
+    "live": 41,
+    "dead": 23,
+    "unreachable": 11,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19637,
+      19638,
+      19639
+    ]
+  },
+  {
+    "host": "fixture-host-04.example",
+    "display": "fixture-host-04.example",
+    "count": 71,
+    "live": 39,
+    "dead": 21,
+    "unreachable": 11,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19712,
+      19713,
+      19714
+    ]
+  },
+  {
+    "host": "fixture-host-05.example",
+    "display": "fixture-host-05.example",
+    "count": 67,
+    "live": 37,
+    "dead": 20,
+    "unreachable": 10,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19783,
+      19784,
+      19785
+    ]
+  },
+  {
+    "host": "fixture-host-06.example",
+    "display": "fixture-host-06.example",
+    "count": 64,
+    "live": 35,
+    "dead": 19,
+    "unreachable": 10,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19850,
+      19851,
+      19852
+    ]
+  },
+  {
+    "host": "alpharc.app",
+    "display": "alpharc.app",
+    "count": 61,
+    "live": 41,
+    "dead": 20,
+    "unreachable": 0,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19293,
+      19294,
+      19295
+    ]
+  },
+  {
+    "host": "fixture-host-07.example",
+    "display": "fixture-host-07.example",
+    "count": 61,
+    "live": 34,
+    "dead": 18,
+    "unreachable": 9,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19914,
+      19915,
+      19916
+    ]
+  },
+  {
+    "host": "fixture-host-08.example",
+    "display": "fixture-host-08.example",
+    "count": 58,
+    "live": 32,
+    "dead": 17,
+    "unreachable": 9,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19975,
+      19976,
+      19977
+    ]
+  },
+  {
+    "host": "fixture-host-09.example",
+    "display": "fixture-host-09.example",
+    "count": 55,
+    "live": 30,
+    "dead": 17,
+    "unreachable": 8,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20033,
+      20034,
+      20035
+    ]
+  },
+  {
+    "host": "fixture-host-10.example",
+    "display": "fixture-host-10.example",
+    "count": 52,
+    "live": 29,
+    "dead": 16,
+    "unreachable": 7,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20088,
+      20089,
+      20090
+    ]
+  },
+  {
+    "host": "fixture-host-11.example",
+    "display": "fixture-host-11.example",
+    "count": 50,
+    "live": 28,
+    "dead": 15,
+    "unreachable": 7,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20140,
+      20141,
+      20142
+    ]
+  },
+  {
+    "host": "fixture-host-12.example",
+    "display": "fixture-host-12.example",
+    "count": 48,
+    "live": 26,
+    "dead": 14,
+    "unreachable": 8,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20190,
+      20191,
+      20192
+    ]
+  },
+  {
+    "host": "fixture-host-13.example",
+    "display": "fixture-host-13.example",
+    "count": 45,
+    "live": 25,
+    "dead": 14,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20238,
+      20239,
+      20240
+    ]
+  },
+  {
+    "host": "data:",
+    "display": "Self-contained (data URI)",
+    "count": 44,
+    "live": 40,
+    "dead": 0,
+    "unreachable": 4,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": null,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19354,
+      19355,
+      19356
+    ]
+  },
+  {
+    "host": "fixture-host-14.example",
+    "display": "fixture-host-14.example",
+    "count": 43,
+    "live": 24,
+    "dead": 13,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20283,
+      20284,
+      20285
+    ]
+  },
+  {
+    "host": "fixture-host-15.example",
+    "display": "fixture-host-15.example",
+    "count": 42,
+    "live": 23,
+    "dead": 13,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20326,
+      20327,
+      20328
+    ]
+  },
+  {
+    "host": "fixture-host-16.example",
+    "display": "fixture-host-16.example",
+    "count": 40,
+    "live": 22,
+    "dead": 12,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20368,
+      20369,
+      20370
+    ]
+  },
+  {
+    "host": "fixture-host-23.example",
+    "display": "fixture-host-23.example",
+    "count": 40,
+    "live": 22,
+    "dead": 12,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20628,
+      20629,
+      20630
+    ]
+  },
+  {
+    "host": "fixture-host-17.example",
+    "display": "fixture-host-17.example",
+    "count": 38,
+    "live": 21,
+    "dead": 11,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20408,
+      20409,
+      20410
+    ]
+  },
+  {
+    "host": "fixture-host-18.example",
+    "display": "fixture-host-18.example",
+    "count": 37,
+    "live": 20,
+    "dead": 11,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20446,
+      20447,
+      20448
+    ]
+  },
+  {
+    "host": "fixture-host-22.example",
+    "display": "fixture-host-22.example",
+    "count": 37,
+    "live": 20,
+    "dead": 11,
+    "unreachable": 6,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20591,
+      20592,
+      20593
+    ]
+  },
+  {
+    "host": "fixture-host-19.example",
+    "display": "fixture-host-19.example",
+    "count": 36,
+    "live": 20,
+    "dead": 11,
+    "unreachable": 5,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20483,
+      20484,
+      20485
+    ]
+  },
+  {
+    "host": "fixture-host-20.example",
+    "display": "fixture-host-20.example",
+    "count": 36,
+    "live": 20,
+    "dead": 11,
+    "unreachable": 5,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20519,
+      20520,
+      20521
+    ]
+  },
+  {
+    "host": "fixture-host-21.example",
+    "display": "fixture-host-21.example",
+    "count": 36,
+    "live": 20,
+    "dead": 11,
+    "unreachable": 5,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      20555,
+      20556,
+      20557
+    ]
+  },
+  {
+    "host": "ipfs:",
+    "display": "IPFS",
+    "count": 31,
+    "live": 18,
+    "dead": 0,
+    "unreachable": 13,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": null,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19398,
+      19399,
+      19400
+    ]
+  },
+  {
+    "host": "tickerspring.com",
+    "display": "tickerspring.com",
+    "count": 27,
+    "live": 27,
+    "dead": 0,
+    "unreachable": 0,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19429,
+      19430,
+      19431
+    ]
+  },
+  {
+    "host": "evoevo.ai",
+    "display": "evoevo.ai",
+    "count": 19,
+    "live": 19,
+    "dead": 0,
+    "unreachable": 0,
+    "opaque": 0,
+    "massPlatform": false,
+    "dnsOk": true,
+    "lastProbeAt": "2026-11-04T07:40:00Z",
+    "sampleIds": [
+      19456,
+      19457,
+      19458
+    ]
+  }
+]

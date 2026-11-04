@@ -1,0 +1,28 @@
+{
+  "name": "rollycall-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Rollycall: search ERC-8004 agents on Robinhood Chain and see which ones answer.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "rollycall-mcp": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollycall/rollycall.git",
+    "directory": "mcp"
+  },
+  "homepage": "https://rollycall.xyz"
+}

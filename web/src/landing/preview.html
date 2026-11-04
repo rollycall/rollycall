@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rollycall landing preview (fixture data)</title><meta name="robots" content="noindex">
+<link rel="icon" href="../../art/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="preview.css"></head>
+<body class="rc"><p style="padding:16px;font:14px system-ui">Rendering the landing template from fixtures… Serve the repo root over HTTP (e.g. <code>python3 -m http.server</code>) and open <code>/web/src/landing/preview.html</code>.</p>
+<script type="module">
+// Static preview: the real SSR template (server/src/pages/landing.mjs) rendered in the browser from web/art/fixtures/*.json.
+import { landingPage } from '../../../server/src/pages/landing.mjs';
+const fx = (f) => fetch(`../../art/fixtures/${f}`).then((r) => r.json());
+const [stats, top, agents, platforms, token, tr] = await Promise.all(['stats.json', 'top.json', 'agents.json', 'platforms.json', 'token.json', 'mcp-transcript.json'].map(fx));
+const html = landingPage({ stats, top, agents, platforms }, {
+  token, xHandle: 'rollycallagent', css: 'preview.css', script: 'main.js',
+  mcpTranscript: tr.lines, mcpTranscriptLabel: 'Fixture transcript · replaced by a real capture',
+  fixtureNote: 'every number on this page is hand-written for design review, not live data',
+});
+const doc = new DOMParser().parseFromString(html, 'text/html');
+document.title = doc.title;
+document.body.replaceWith(doc.body);
+// favicon paths for the static preview
+for (const img of document.querySelectorAll('link[rel=icon]')) img.href = '../../art/favicon.svg';
+await import('./main.js');
+</script></body></html>

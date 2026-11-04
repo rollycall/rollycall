@@ -1,0 +1,31 @@
+/* Page-scoped styles for APP pages (agents, agent, platforms, docs, token). Tokens come from web/src/styles/tokens.css. */
+.pg-head { padding: 28px 0 12px; }
+.pg-head h1 { margin: 0 0 6px; font-family: var(--f-display, 'Archivo Black', sans-serif); font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.1; overflow-wrap: anywhere; }
+.pg-sub { margin: 0; color: var(--ink-2, #474C54); max-width: 70ch; }
+.pg-filters { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 14px 0 18px; padding: 14px; background: var(--panel); border: 1px solid var(--line, #D9D5CC); border-radius: 6px; }
+.pg-filters label { display: grid; gap: 4px; font-size: .8125rem; color: var(--ink-2, #474C54); }
+.pg-filters input, .pg-filters select { font: inherit; padding: 8px 10px; border: 1px solid var(--line, #D9D5CC); border-radius: 4px; background: var(--panel-solid); color: var(--ink, #15171A); min-height: 40px; max-width: 100%; }
+.pg-filters .pg-check { display: flex; align-items: center; gap: 8px; min-height: 40px; }
+.pg-filters .pg-check input { min-height: 0; }
+.pg-filters button { font: inherit; font-weight: 600; min-height: 40px; padding: 8px 16px; border: 1px solid var(--live); background: var(--live); color: var(--ink-inv); border-radius: 4px; cursor: pointer; }
+@media (min-width: 768px) { .pg-filters { grid-template-columns: repeat(3, 1fr); align-items: end; } }
+.pg-pager { display: flex; justify-content: space-between; gap: 12px; margin: 16px 0 28px; flex-wrap: wrap; }
+.pg-empty { padding: 28px; background: var(--panel); border: 1px dashed var(--line, #D9D5CC); border-radius: 6px; }
+.pg-grid { display: grid; gap: 16px; grid-template-columns: 1fr; margin: 16px 0; }
+@media (min-width: 900px) { .pg-grid--2 { grid-template-columns: 1fr 1fr; } }
+.pg-card { background: var(--panel); color: var(--ink); border: 1px solid var(--line, #D9D5CC); border-radius: 6px; padding: 16px; min-width: 0; }
+.pg-card h2 { margin: 0 0 10px; font-family: var(--f-display, 'Archivo Black', sans-serif); font-size: 1.05rem; }
+.pg-kv { display: grid; grid-template-columns: 1fr; gap: 2px 14px; margin: 0; }
+.pg-kv dt { color: var(--ink-2, #474C54); font-size: .8125rem; margin-top: 8px; }
+.pg-kv dd { margin: 0; overflow-wrap: anywhere; min-width: 0; }
+@media (min-width: 640px) { .pg-kv { grid-template-columns: 150px 1fr; } .pg-kv dt { margin-top: 0; } }
+.pg-code { font-family: var(--f-mono, 'Red Hat Mono', monospace); font-size: .8125rem; background: var(--panel-solid); color: var(--ink); padding: 10px 12px; border-radius: 4px; overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0; }
+.pg-hist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: .875rem; }
+.pg-hist li { display: flex; gap: 10px; flex-wrap: wrap; }
+.pg-prose { max-width: 74ch; }
+.pg-prose h2 { margin-top: 36px; font-family: var(--f-display, 'Archivo Black', sans-serif); scroll-margin-top: 70px; }
+.pg-prose table { border-collapse: collapse; width: 100%; font-size: .875rem; display: block; overflow-x: auto; }
+.pg-prose th, .pg-prose td { border: 1px solid var(--line, #D9D5CC); padding: 6px 8px; text-align: left; vertical-align: top; }
+.pg-prose code { font-family: var(--f-mono, 'Red Hat Mono', monospace); font-size: .85em; }
+.pg-toc { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0 0; padding: 0; list-style: none; }
+.pg-plat td, .pg-plat th { vertical-align: top; }

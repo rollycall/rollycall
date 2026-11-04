@@ -1,0 +1,11 @@
+{
+  "_fixture": "FIXTURE — hand-written for the landing preview, not live data (replace with a real MCP capture on day 3)",
+  "lines": [
+    "> search_agents {\"query\":\"trading\",\"limit\":3}",
+    "{ \"items\": [",
+    "  { \"id\": 20700, \"name\": \"Spinner #69\", \"platform\": \"spin.trading\", \"status\": \"live\", \"score\": 71 },",
+    "  { \"id\": 19840, \"name\": \"Fixture Agent Loom\", \"platform\": \"loomdesk.trade\", \"status\": \"unreachable\", \"score\": 12 } ],",
+    "  \"total\": 2,",
+    "  \"note\": \"score is a Rollycall heuristic; verify with the cast lines in verify[]\" }"
+  ]
+}

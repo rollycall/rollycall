@@ -1,0 +1,14 @@
+{
+  "name": "Rollycall",
+  "short_name": "Rollycall",
+  "description": "ERC-8004 agents on Robinhood Chain, counted daily.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F2F0EA",
+  "theme_color": "#F2F0EA",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_fixture": "FIXTURE — hand-written for the landing preview, not live data",
+  "filters": {
+    "mass": "exclude"
+  },
+  "items": [
+    {
+      "id": 20700,
+      "name": "Spinner #69",
+      "platform": "spin.trading",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 71
+      },
+      "owner": "0x0000000000000000000000000000000009c54564",
+      "ponsLink": null,
+      "massPlatform": false
+    },
+    {
+      "id": 20311,
+      "name": "Fixture Agent Kestrel",
+      "platform": "a-identity.xyz",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 68
+      },
+      "owner": "0x0000000000000000000000000000000009964439",
+      "ponsLink": {
+        "ca": "0xf1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1",
+        "symbol": "FIXT"
+      },
+      "massPlatform": false
+    },
+    {
+      "id": 19982,
+      "name": "Fixture Agent Ledgerline",
+      "platform": "meshgateway.co",
+      "status": "live",
+      "checkedAt": "2026-11-04T07:40:00Z",
+      "score": {
+        "total": 66
+      },
+      "owner": "0x00000000000000000000000000000000096e8312",
+      "ponsLink": null,
+      "massPlatform": false
+    }
+  ]
+}
