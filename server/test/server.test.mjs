@@ -160,3 +160,18 @@ test('probes, owner nonce and pons scan feed the score', async () => {
   assert.equal(s.card, 40); assert.equal(s.endpoint, 10); assert.equal(s.owner, 15); assert.equal(s.pons, 5);
   assert.equal(db.prepare('SELECT ca FROM pons_links WHERE id=1').get().ca, COIN);
 });
+
+test('visits: aggregate counter stores no ip/ua, groups pages, refs and bots', async () => {
+  const { pageOf, refOf, kindOf } = await import('../src/visits.mjs');
+  assert.equal(pageOf('/agent/123'), '/agent/:id'); assert.equal(pageOf('/dist/app.css'), null); assert.equal(pageOf('/'), '/');
+  assert.equal(refOf('https://t.co/abc', 'rollycall.xyz'), 'x'); assert.equal(refOf('https://rollycall.xyz/agents', 'rollycall.xyz'), 'internal');
+  assert.equal(refOf(undefined, 'rollycall.xyz'), 'direct'); assert.equal(kindOf('Twitterbot/1.0'), 'bot'); assert.equal(kindOf('Mozilla/5.0 (iPhone)'), 'browser');
+  const db = openDb(':memory:');
+  const app = buildApp({ db });
+  await app.inject({ method: 'GET', url: '/', headers: { referer: 'https://t.co/x', 'user-agent': 'Mozilla/5.0' } });
+  await app.inject({ method: 'GET', url: '/', headers: { referer: 'https://t.co/y', 'user-agent': 'Mozilla/5.0' } });
+  await app.inject({ method: 'GET', url: '/api/health', headers: { 'user-agent': 'curl/8' } });
+  const rows = db.prepare('SELECT * FROM visits').all();
+  assert.deepEqual(rows.map((r) => [r.page, r.ref, r.kind, r.n]), [['/', 'x', 'browser', 2]]);
+  assert.deepEqual(Object.keys(rows[0]).sort(), ['hour', 'kind', 'n', 'page', 'ref']);
+});

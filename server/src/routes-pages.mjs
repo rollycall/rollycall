@@ -14,7 +14,7 @@ export function registerPages(app, { tokenPath = process.env.TOKEN_JSON || path.
     if (Date.now() - tok.at > 60_000) { try { tok = { at: Date.now(), v: JSON.parse(readFileSync(tokenPath, 'utf8')) }; } catch { tok = { at: Date.now(), v: null }; } }
     return tok.v;
   };
-  const get = async (url) => { const r = await app.inject(url); if (r.statusCode >= 400) { const e = new Error('http_' + r.statusCode); e.status = r.statusCode; e.body = r.json(); throw e; } return r.json(); };
+  const get = async (url) => { const r = await app.inject({ url, headers: { 'x-rc-internal': '1' } }); if (r.statusCode >= 400) { const e = new Error('http_' + r.statusCode); e.status = r.statusCode; e.body = r.json(); throw e; } return r.json(); };
   const html = (reply, s, code = 200) => reply.code(code).type('text/html; charset=utf-8').header('cache-control', 'public, max-age=60').send(s);
   const safe = (fn) => async (req, reply) => { try { return await fn(req, reply); } catch (e) { return html(reply, '<!doctype html><title>Rollycall</title><p>The index is not readable right now.</p>', 503); } };
 

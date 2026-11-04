@@ -4,6 +4,7 @@ import { config } from './config.mjs';
 import { platformOf, isMassPlatform, MASS_THRESHOLD, hostOf, scoreOf, SCORE_V } from '../../shared/model.mjs';
 import { registerPages } from './routes-pages.mjs';
 import { IDENTITY_REGISTRY } from '../../shared/abi.mjs';
+import { makeVisits } from './visits.mjs';
 
 const iso = (s) => (s ? new Date(s * 1000).toISOString() : null);
 const UNREACH = ['unreachable', 'host-down'];
@@ -12,6 +13,8 @@ const ROUTES = ['/api', '/api/stats', '/api/agents', '/api/agent/:id', '/api/age
 
 export function buildApp({ db, rpc = null, startedAt = Date.now(), pagesOpts = {} } = {}) {
   const app = Fastify({ logger: false });
+  const visits = makeVisits(db, { ownHost: config.domain });
+  app.addHook('onResponse', async (req, reply) => { try { visits.record(req, reply.statusCode); } catch {} });
   app.addHook('onSend', async (req, reply) => {
     if (req.url.startsWith('/api')) { reply.header('Access-Control-Allow-Origin', '*'); if (!reply.hasHeader('cache-control')) reply.header('Cache-Control', 'public, max-age=60'); }
   });

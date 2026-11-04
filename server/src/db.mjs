@@ -26,6 +26,7 @@ CREATE INDEX IF NOT EXISTS scores_total ON scores(total DESC, id ASC);
 CREATE TABLE IF NOT EXISTS stats_daily (day TEXT PRIMARY KEY, registered INTEGER, live INTEGER, unreachable INTEGER, dead INTEGER, opaque INTEGER, platforms INTEGER, computed_at INTEGER);
 CREATE TABLE IF NOT EXISTS holders (address TEXT PRIMARY KEY, raw TEXT, checked_at INTEGER);
 CREATE TABLE IF NOT EXISTS metrics (day TEXT, key TEXT, count INTEGER, PRIMARY KEY(day, key));
+CREATE TABLE IF NOT EXISTS visits (hour TEXT, page TEXT, ref TEXT, kind TEXT, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(hour, page, ref, kind));
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
 `;
 
