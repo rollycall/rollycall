@@ -142,3 +142,15 @@
 /* ---------- glossary term (tooltip) ---------- */
 .rc-term { text-decoration: underline dotted var(--ink-3); text-underline-offset: 3px; cursor: help; position: relative; }
 .rc-term[data-tip]:hover::after, .rc-term[data-tip]:focus::after { content: attr(data-tip); position: absolute; left: 0; top: calc(100% + 8px); z-index: 6; width: max-content; max-width: 260px; padding: 8px 10px; background: var(--panel-solid); color: var(--ink); border: 1px solid var(--line-2); border-radius: var(--radius-sm); font: 400 12px/1.4 var(--f-body); letter-spacing: 0; text-transform: none; white-space: normal; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
+
+/* ---------- depth layer (v3, semi-3D): glass surfaces get layered shadows + a lit edge ---------- */
+.rc-tablewrap, .rc-scorepanel, .lx-glass, .pg-card, .pg-filters, .lx-term { position: relative; box-shadow: var(--depth); isolation: isolate; }
+.rc-tablewrap::before, .rc-scorepanel::before, .lx-glass::before, .pg-card::before, .pg-filters::before, .lx-term::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 1;
+  background: var(--edge); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lx-glass, .pg-card, .rc-scorepanel, .lx-term { transition: transform .35s var(--ease), box-shadow .35s var(--ease); transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0); }
+  .pg-card:hover, .lx-glass:hover, .lx-term:hover { box-shadow: var(--depth-hi); }
+  .pg-card:hover { transform: perspective(1000px) translateY(-2px); }
+}

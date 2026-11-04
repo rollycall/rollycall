@@ -19,7 +19,7 @@ export function shell({ title, desc, path, body, canonical, noindex = false, opt
 <meta property="og:type" content="website"><meta property="og:site_name" content="Rollycall"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${esc(url)}"><meta property="og:image" content="${esc(site)}/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@${X_HANDLE}"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(desc)}"><meta name="twitter:image" content="${esc(site)}/og.png">
-<meta name="theme-color" content="#F2F0EA"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#06090A"><meta name="color-scheme" content="dark"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/dist/app.css"></head>
 <body class="rc"><a class="rc-skip" href="#main">Skip to content</a>
 ${siteNav({ path, xHandle: X_HANDLE })}

@@ -29,6 +29,17 @@ if (!reduced) {
   requestAnimationFrame(tick);
   setTimeout(() => els.forEach((el, i) => { el.textContent = fmt(targets[i]); }), dur + 150);
 
+  // hover tilt (a few degrees) on glass cards, fine pointers only
+  if (matchMedia('(pointer: fine)').matches) {
+    for (const el of document.querySelectorAll('.lx-glass, .lx-term, .rc-scorepanel')) {
+      el.addEventListener('pointermove', (e) => {
+        const b = el.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - 0.5, y = (e.clientY - b.top) / b.height - 0.5;
+        el.style.setProperty('--ry', (x * 5).toFixed(2) + 'deg'); el.style.setProperty('--rx', (-y * 4).toFixed(2) + 'deg');
+      });
+      el.addEventListener('pointerleave', () => { el.style.removeProperty('--rx'); el.style.removeProperty('--ry'); });
+    }
+  }
+
   // scroll reveal
   const items = document.querySelectorAll('.rc-reveal');
   if ('IntersectionObserver' in window) {

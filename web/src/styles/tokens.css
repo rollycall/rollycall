@@ -54,6 +54,10 @@
   --radius-sm: 6px;
   --rule: 1px solid var(--line);
   --blur: blur(14px) saturate(140%);
+  /* depth: layered shadows + top-edge highlight for glass */
+  --depth: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 0 0 1px rgba(130, 255, 196, 0.04) inset, 0 2px 4px rgba(0, 0, 0, 0.35), 0 12px 24px -8px rgba(0, 0, 0, 0.55), 0 32px 64px -24px rgba(0, 0, 0, 0.6);
+  --depth-hi: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 0 0 1px rgba(57, 229, 140, 0.12) inset, 0 4px 8px rgba(0, 0, 0, 0.35), 0 20px 40px -12px rgba(0, 0, 0, 0.6), 0 0 48px -16px rgba(57, 229, 140, 0.35);
+  --edge: linear-gradient(160deg, rgba(160, 255, 210, 0.38), rgba(130, 255, 196, 0.06) 35%, rgba(130, 255, 196, 0.02) 65%, rgba(57, 229, 140, 0.22));
 
   /* motion */
   --draw: 300ms;
