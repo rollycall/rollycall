@@ -156,7 +156,7 @@ export function tokenPage(token, opts) {
   if (t.launched && /^0x[0-9a-fA-F]{40}$/.test(t.ca || '') && !/^0x0{40}$/.test(t.ca)) {
     const live = `${head('Token', sym)}
 <div class="pg-card pg-prose"><p><b>The only official contract address:</b></p>${copyBox(t.ca, { label: 'Contract address', prompt: 'CA' })}
-<p><a class="rc-btn" href="https://ponsfamily.com/token/${esc(t.ca)}" rel="noopener" target="_blank">Buy on Pons</a></p>
+<p><a class="rc-btn" href="https://ponsfamily.com/launchpad/${esc(t.ca.toLowerCase())}" rel="noopener" target="_blank">Buy on Pons</a></p>
 <p>Only on Pons, Robinhood Chain. The same address is on <a href="https://x.com/${esc(X_HANDLE)}" rel="noopener" target="_blank">@${esc(X_HANDLE)}</a>. Anything else is not us.</p>
 <p>The product stays open to everyone: no wallet to connect and nothing to approve to use it. No promise of returns.</p></div>${disclaimer()}`;
     return shell({ title: 'Token · Rollycall', desc: `The only official ${sym || 'token'} contract address: ${esc(t.ca)}`, path: '/token', canonical: '/token', body: live, opts });

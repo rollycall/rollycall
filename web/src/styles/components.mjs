@@ -72,7 +72,7 @@ export const massBadge = (count) =>
   `<span class="rc-badge rc-badge--mass" title="Mass platform: more than 1,000 agents on this host${count ? ` (${fmtInt(count)})` : ''}. Labelled, not hidden.">mass platform</span>`;
 
 export const ponsChip = (p) =>
-  p && p.ca ? `<a class="rc-badge rc-badge--pons" href="https://ponsfamily.com/token/${esc(p.ca)}" rel="nofollow noopener" target="_blank" title="Pons-linked: the card names this Pons launch">Pons${p.symbol ? ` · ${esc(trunc(p.symbol, 10))}` : ''}</a>` : '';
+  p && p.ca ? `<a class="rc-badge rc-badge--pons" href="https://ponsfamily.com/launchpad/${esc(p.ca)}" rel="nofollow noopener" target="_blank" title="Pons-linked: the card names this Pons launch">Pons${p.symbol ? ` · ${esc(trunc(p.symbol, 10))}` : ''}</a>` : '';
 
 /** Score number with a 10-cell meter (each cell = 10 points). */
 export function scoreCell(total) {

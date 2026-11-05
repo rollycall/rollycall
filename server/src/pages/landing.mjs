@@ -128,7 +128,7 @@ function tokenSlot(t, o) {
     return `<section class="lx-token" aria-label="Token"><div class="rc-wrap"><div class="lx-token__in lx-glass">
 <span class="lx-token__sym">${sym || 'Token'}</span>
 ${copyBox(t.ca, { label: 'Contract address', prompt: 'CA' })}
-<a class="rc-btn" href="https://ponsfamily.com/token/${esc(t.ca)}" rel="noopener" target="_blank">Buy on Pons</a>
+<a class="rc-btn" href="https://ponsfamily.com/launchpad/${esc(t.ca.toLowerCase())}" rel="noopener" target="_blank">Buy on Pons</a>
 <p class="lx-token__note">The only official CA is the one on this page${x}. No promise of returns.</p></div></div></section>`;
   }
   const day = fmtDay(t.launchDate);

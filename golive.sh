@@ -6,10 +6,10 @@ set -euo pipefail
 cd "$(dirname "$0")"
 CA="${1:-}"
 [[ "$CA" =~ ^0x[0-9a-fA-F]{40}$ ]] || { echo "usage: $0 0x<40 hex>"; exit 1; }
-CA="$(echo "$CA" | tr 'A-F' 'a-f' | sed 's/^0X/0x/')"
+LC="$(echo "$CA" | tr 'A-F' 'a-f' | sed 's/^0X/0x/')"   # Pons lookup is lowercase; the site shows the CA as typed
 HOST="${HOST:-$(cat .deploy-host 2>/dev/null || echo us1)}"; DOMAIN="${DOMAIN:-rollycall.xyz}"
 [ -f web/token.json ] || { echo "web/token.json missing"; exit 1; }
-BODY="$(timeout 30 curl -fsS -H "user-agent: $DOMAIN/0.1 golive" "https://ponsfamily.com/api/launches/$CA")" || { echo "Pons does not know $CA"; exit 1; }
+BODY="$(timeout 30 curl -fsS -H "user-agent: $DOMAIN/0.1 golive" "https://ponsfamily.com/api/launches/$LC")" || { echo "Pons does not know $CA"; exit 1; }
 SYM="$(printf '%s' "$BODY" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>process.stdout.write(String(JSON.parse(s).symbol||'')))")"
 [ -n "$SYM" ] || { echo "no symbol from Pons"; exit 1; }
 NOW="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
