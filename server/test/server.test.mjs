@@ -98,6 +98,12 @@ test('cards: dead host => host-down without per-card fetches; live/opaque/data s
   computeScores(db); writeStats(db);
   assert.equal(db.prepare('SELECT COUNT(*) n FROM scores').get().n, 60);
   const again = await checkCards(db, { observe }); assert.equal(again.checked, 0); // nothing due
+  // a daily card stamped minutes after the timer fired is still rechecked by the next day's run
+  const nowSec = Math.floor(Date.now() / 1000);
+  db.prepare('UPDATE cards SET next_check_at=?').run(nowSec + 180);
+  const nextDay = await checkCards(db, { observe }); assert.ok(nextDay.checked > 0);
+  db.prepare('UPDATE cards SET next_check_at=?').run(nowSec + 7 * 3600);
+  assert.equal((await checkCards(db, { observe })).checked, 0); // not due yet
 });
 
 test('api: shapes, filters, pagination, 404s', async () => {

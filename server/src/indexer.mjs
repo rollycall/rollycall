@@ -7,6 +7,9 @@ import { livenessOf, scoreOf, selfConsistentOf, isMassPlatform, schemeOf, hostOf
 
 const sec = () => Math.floor(Date.now() / 1000);
 const DAY = 86400;
+// The daily timer starts at a fixed time but cards are stamped minutes later, so "24h after the last check" lands just after
+// the next run reaches this phase. Anything due within this window counts as due, otherwise daily cards are only checked every other day.
+const DUE_SLACK_SEC = 6 * 3600;
 
 export function upsertAgents(db, rows, now = sec()) {
   const get = db.prepare('SELECT token_uri FROM agents WHERE id=?');
@@ -84,7 +87,7 @@ function storeCard(db, agent, obs, prevCard, now) {
 export async function checkCards(db, { observe = observeCard, limit = Infinity, log = () => {} } = {}) {
   const now = sec();
   const due = db.prepare(`SELECT a.id, a.token_uri, c.fail_count, c.first_fail_at, c.id AS has_card FROM agents a LEFT JOIN cards c ON c.id=a.id
-    WHERE a."exists"=1 AND (c.id IS NULL OR c.next_check_at <= ?) ORDER BY a.id`).all(now).slice(0, limit);
+    WHERE a."exists"=1 AND (c.id IS NULL OR c.next_check_at <= ?) ORDER BY a.id`).all(now + DUE_SLACK_SEC).slice(0, limit);
   const downHosts = new Set(db.prepare('SELECT host FROM hosts WHERE dns_ok=0').all().map((r) => r.host));
   const tally = {}; let n = 0, hostDown = 0;
   const bump = (s) => { tally[s] = (tally[s] || 0) + 1; if (++n % 500 === 0) log(`cards ${n}/${due.length} ${JSON.stringify(tally)}`); };
